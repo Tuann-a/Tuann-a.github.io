@@ -1,0 +1,64 @@
+/* Temel stil ayarları */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap');
+
+body {
+    font-family: 'Anton', sans-serif;
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+    padding: 0;
+    background: url("045fae2af4255a548baa40cc78e6830d.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* From https://css.glass */
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+
+
+}
+
+p {
+    font-size: 18px;
+    max-width: 500px;
+    color: white;
+
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+span {
+    color: red;
+}
+
+.photo {
+    height: 80vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.photo-section img {
+    margin-top: -20vh;
+    max-width: 350px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-width: 50px;
+    border-color: red;
+}
+
+.praise-section {
+    margin-top: 20px;
+
+}
+
+/* Ekstra stil ayarları ve animasyonlar burada eklenebilir */
