@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Special website for TUanna❤️ </title>
+
+    <script>
+        var counter = 1;
+
+        function no() {
+            console.log(counter)
+
+            if (counter == 1) {
+                document.getElementById("1").style.display = "none";
+                document.getElementById("2").style.display = "";
+
+            }
+            if (counter == 2) {
+                document.getElementById("2").style.display = "none";
+                document.getElementById("3").style.display = "";
+
+
+            } if (counter == 3) {
+                document.getElementById("3").style.display = "none";
+                document.getElementById("4").style.display = "";
+
+            } if (counter == 4) {
+                document.getElementById("4").style.display = "none";
+                document.getElementById("5").style.display = "";
+                console.log("x")
+
+            }
+            if (counter == 5) {
+                document.getElementById("5").style.display = "none";
+                document.getElementById("6").style.display = "";
+
+            }
+            if (counter == 6) {
+                document.getElementById("6").style.display = "none";
+                document.getElementById("7").style.display = "";
+
+            } if (counter == 7) {
+                document.getElementById("7").style.display = "none";
+                document.getElementById("8").style.display = "";
+
+            } if (counter == 8) {
+                document.getElementById("8").style.display = "none";
+                document.getElementById("1").style.display = "";
+                counter = 0;
+
+
+            }
+            counter++;
+
+        }
+        function yes() {
+            document.getElementById(`${counter}`).style.display = "none";
+            document.getElementById("yes").style.display = "";
+
+        }
+    </script>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .screen {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main style="display: flex; justify-content: center; ">
+
+        <div class="screeen" id="1" style="position: absolute; top: 30vh; ">
+            <h1 style="color: white;">Beni affedecek misin?
+
+            </h1>
+            <img src="2bf115e8b7a613c6ed42748400af0422 (1).jpg" alt="">
+
+            <div>
+
+                <button onclick="yes()">
+                    Evet
+                </button>
+
+                <button onclick="no()">
+                    Hayır
+                </button>
+            </div>
+
+        </div>
+        <div class="screeen" id="2" style="position: absolute; top: 30vh; display: none; ">
+            <h1 style="color: white;">Ne demek affetmiyorum affet.
+
+            </h1>
+            <img src="68e3054ad20f7b20320b83284bffd7da.jpg" alt="">
+
+            <div>
+                <button onclick="yes()">
+                    Evet
+                </button>
+
+                <button onclick="no()">
+                    Hayır
+                </button>
+            </div>
+
+        </div>
+        <div class="screeen" id="3" style="position: absolute; top: 30vh; display: none; ">
+            <h1 style="color: white;">Beni affet
+
+            </h1>
+            <img src="artworks-000058468584-soapwx-t500x500.jpg" alt="">
+
+            <div>
+                <button onclick="yes()">
+                    Evet
+                </button>
+
+                <button onclick="no()">
+                    Hayır
+                </button>
+            </div>
+
+        </div>
+        <div class="screeen" id="4" style="position: absolute; top: 30vh;display: none;  ">
+            <h1 style="color: white;">Lütfen affeder misiniz hanımefendi
+
+            </h1>
+            <img src="e99a1c81777e8d92eceda0f9cd9135c0.png" alt="">
+
+            <div>
+                <button onclick="yes()">
+                    Evet
+                </button>
+
+                <button onclick="no()">
+                    Hayır
+                </button>
+            </div>
+
+        </div>
+        <div class="screeen" id="5" style="position: absolute; top: 30vh;display: none;  ">
+            <h1 style="color: white;">Yapmış bir eşşeklik affet lütfen.
+
+            </h1>
+            <img src="Apology-Message-To-My-Love.jpg" alt="">
+
+            <div>
+                <button onclick="yes()">
+                    Evet
+                </button>
+
+                <button onclick="no()">
+                    Hayır
+                </button>
+            </div>
+
+        </div>
+        <div class="screeen" id="6" style="position: absolute; top: 30vh; display: none; ">
+            <h1 style="color: white;">nooooolur affet
+            </h1>
+            <img src="121c472621d880bf9a7961fe1cebe8b8.jpg" alt="">
+
+            <div>
+                <button onclick="yes()">
+                    Evet
+                </button>
+
+                <button onclick="no()">
+                    Hayır
+                </button>
+            </div>
+
+        </div>
+        <div class="screeen" id="7" style="position: absolute; top: 30vh; display: none; ">
+            <h1 style="color: white;">allahın varsa affedersin.
+
+            </h1>
+            <img src="sddefault.jpg" alt="">
+
+            <div>
+                <button onclick="yes()">
+                    Evet
+                </button>
+
+                <button onclick="no()">
+                    Hayır
+                </button>
+            </div>
+
+        </div>
+        <div class="screeen" id="8" style="position: absolute; top: 30vh; display: none;">
+            <h1 style="color: white;">Allahın yok mu senin affet lütfen.
+
+            </h1>
+            <img src="s-547c5fe4b0deb41edb57f5b3c6a59ac5b69c0a7a.webp" alt="">
+
+            <div>
+                <button onclick="yes()">
+                    Evet
+                </button>
+
+                <button onclick="no()">
+                    Hayır
+                </button>
+            </div>
+
+        </div>
+        <div class="screeen" id="yes" style="position: absolute; top: 30vh; display: none; ">
+            <h1 style="color: white;">Affettiysen bunu sevgiline gönderebilirsin❤️.
+
+            </h1>
+            <img src="2c8b4dce-aa53-48af-8aae-dfb43edc3936.jfif" alt="">
+
+
+
+        </div>
+    </main>
+</body>
+
+</html>
