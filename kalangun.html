@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KalanGün</title>
+    <style>
+        .frame {
+            height: 100vh;
+            width: 100vw;
+            background-color: #eee;
+            background-position: center;
+            background-size: cover;
+
+            animation: image 16s infinite alternate;
+        }
+
+        @keyframes image {
+            0% {
+                background-image: url('kalangunphoto/WhatsApp\ Image\ 2023-11-12\ at\ 23.39.05.jpeg');
+            }
+
+            17% {
+                background-image: url('kalangunphoto/WhatsApp\ Image\ 2023-11-12\ at\ 23.39.06.jpeg');
+            }
+
+            34% {
+                background-image: url('kalangunphoto/WhatsApp\ Image\ 2023-11-12\ at\ 23.39.06\ \(1\).jpeg');
+            }
+
+            46% {
+                background-image: url('kalangunphoto/WhatsApp\ Image\ 2023-11-12\ at\ 23.39.06\ \(1\).jpeg');
+            }
+
+            66% {
+                background-image: url('kalangunphoto/WhatsApp\ Image\ 2023-11-12\ at\ 23.39.06\ \(2\).jpeg');
+            }
+
+            83% {
+                background-image: url('kalangunphoto/WhatsApp\ Image\ 2023-11-12\ at\ 23.39.06\ \(3\).jpeg');
+            }
+
+            100% {
+                background-image: url('kalangunphoto/WhatsApp\ Image\ 2023-11-12\ at\ 23.39.07.jpeg');
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <div style=" height: 100vh;  display: flex; flex-direction: column; justify-content: center;">
+            <div style="/* From https://css.glass */
+            background: rgba(255, 255, 255, 0.24);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            border: 1px solid rgba(255, 255, 255, 0.3);">
+                <h2 style="color: red; text-align: center; margin: 0">Bu güzel anılara bir yenisini daha eklememize
+                    kalan süre 😘</h2>
+                <p style="color: red; margin: 10px; font-size: 52px; text-align: center; " id="demo"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 6, 2023 12:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("demo").innerHTML = days + " Gün " + hours + " Saat "
+            + minutes + " Dakika " + seconds + " Saniye ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+
+</html>
