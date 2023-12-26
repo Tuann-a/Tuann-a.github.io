@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>To Miss_nr</title>
+  <link rel="shortcut icon" href="favicon.png">
+  <link href="static/css/section1.css" rel="stylesheet">
+  <link href="static/css/section3.css" rel="stylesheet">
+  <link href="static/css/section4.css" rel="stylesheet">
+  <link href="static/css/section5.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.min.css" rel="stylesheet">
+  <style>
+    /* İlk section için arka plan resmi */
+    .section {
+      background-image: url('sosyo/WhatsApp Image 2023-10-17 at 11.53.06.jpeg');
+      background-size: cover;
+      /* Arka plan resminin ekran boyutuna sığmasını sağlar */
+      background-position: center;
+      /* Arka plan resminin ortalanmasını sağlar */
+    }
+  </style>
+</head>
+
+<body>
+  <audio loop="loop" autoplay="autoplay">
+    <source src="music/İyi ki Doğdun.mp3" type="audio/mp3" />
+  </audio>
+  <div id="fullPage">
+    <div class="section">
+      <div id="app">
+        <div class="quotes verticalcenter">
+          <p class="q1">İyikiiiii Doğduunnnn❤️ </p>
+          <p class="q2">Güzelllerrrr Güzeliimmm❤️</p>
+
+        </div>
+        <div class="main-section">
+          <div class="heart"></div>
+          <div id="top">İYİKİ </div>
+          <div class="love">Doğmuşsun </div>
+          <div id="bottom">mıkşA</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section4">
+      <div class="paper">
+        <div class="lines">
+          <div class="text" spellcheck="false">
+            Güzellerrr Güzelimm Aşkımm❤️ <br /><br />
+            <span class='sentence sentence1'></span>
+            <br />
+            <span class='sentence sentence2'></span>
+            <br />
+            <span class='sentence sentence3'></span>
+            <br />
+            <span class='sentence sentence4'></span>
+            <br />
+            <span class='sentence sentence5'></span>
+            <br />
+            <span class='sentence sentence6'></span>
+            <br />
+            <span class='sentence sentence7'></span>
+            <br />
+            <span class='sentence sentence6'></span>
+            <br />
+            <span class='sentence sentence7'></span>
+            <br />
+          </div>
+        </div>
+        <div class="holes hole-top"></div>
+        <div class="holes hole-middle"></div>
+        <div class="holes hole-bottom"></div>
+      </div>
+    </div>
+    <div class="section section5">
+
+      <div
+        style="height: 100vh; display: flex ; flex-direction: column; align-items: center ; justify-content: flex-end;">
+        <div>
+          .
+        </div>
+        <div>
+          <H3 style="text-align: center; color: red;">iYİ Kİ DOĞDUN İYİ Kİ BERABERİZ GÜZELLER GÜZELİMM❤️❤️❤️❤️❤️</H3>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.min.js"></script>
+  <script src='http://css-tricks.com/examples/BlurredText/js/jquery.lettering.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var t1 = new TimelineMax({
+        repeat: -1
+      });
+
+      $('#fullPage').fullpage({
+        afterLoad: function (link, index) {
+          switch (index) {
+            case 2:
+              if (($(".sentence1").html() === '') || ($(".sentence10").html() !== '')) {
+
+                $(".sentence").empty();
+                $('.typed-cursor').remove();
+
+                $(".sentence1").typed({
+                  strings: ["Bugün senin özel günün ve ben de bu özel günü seninle kutlamaktan dolayı ne kadar mutlu olduğumu ifade etmek istiyorum. "],
+                  typeSpeed: 10,
+                  backSpeed: 10,
+                  cursorChar: "♡",
+                  loop: false,
+                  callback: function () {
+                    $(".sentence2").typed({
+                      strings: ["Seninle geçirdiğim her an, benim için bir anlam taşıyor. Gözlerine baktığımda, içindeki güzellikleri ve sevgiyi görüyorum. Dudakların, beni mutluluğa götüren en tatlı öpücükleri saklıyor. "],
+                      startDelay: 1000,
+                      typeSpeed: 5,
+                      backSpeed: 5,
+                      cursorChar: "♡",
+                      callback: function () {
+                        $(".sentence3").typed({
+                          strings: ["Bugün, senin doğum günün ve seni ne kadar sevdiğimi, senin hayatıma kattığın anlamı ifade etmek istiyorum. Seninle birlikte geçirdiğim her an, bana sevgi ve mutluluk getiriyor. Seninle olduğum için minnettarım ve hayatımın geri kalanını seninle geçirmek için sabırsızlanıyorum."],
+                          startDelay: 1000,
+                          typeSpeed: 30,
+                          backSpeed: 10,
+                          cursorChar: "♡",
+                          callback: function () {
+                            $(".sentence4").typed({
+                              strings: ["İyi ki doğdun, sevgilim! Seninle geçirdiğim her anın değerini bilmek, hayatımın en büyük zenginliği. Umarım bu özel günün, senin yüzünde bir tebessüm yaratır ve seni sevgiyle sarar."],
+                              startDelay: 1000,
+                              typeSpeed: 30,
+                              backSpeed: 10,
+                              cursorChar: "♡",
+                              callback: function () {
+                                $(".sentence5").typed({
+                                  strings: ["Seni seviyorum,Kocan"],
+                                  startDelay: 1000,
+                                  typeSpeed: 30,
+                                  backSpeed: 10,
+                                  cursorChar: "♡",
+                                });
+                              }
+                            });
+                          }
+                        });
+                      }
+                    });
+                  }
+                });
+              }
+
+              break;
+
+
+            default:
+              break;
+          }
+        },
+
+        onLeave: function (link, index) {
+          switch (index) {
+
+            default:
+              break;
+          }
+        }
+      });
+
+      $('.q1').delay(1000).fadeIn(300).delay(2000).fadeOut(300, function () {
+        $('.q2').delay(1000).fadeIn(300).delay(2500).fadeOut(300, function () {
+          $('.quotes').fadeOut(300);
+          $('.main-section').delay(1000).fadeIn(300, function () {
+
+          });
+        });
+      });
+    });
+
+    $('audio')[0].volume = 0.4;
+
+    $("#top").lettering();
+    $("#bottom").lettering();
+
+  </script>
+</body>
+
+</html>
