@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelime Oyunu</title>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        p {
+            color: white;
+        }
+
+        h1 {
+            font-size: 52px;
+        }
+
+        div {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+
+
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input[type="text"] {
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="">Aşkıma özel Kelime Oyunu</h1>
+        <div id="wordHint"></div>
+        <div id="harfİpucu"></div>
+        <input type="text" id="guessInput" placeholder="Tahmininizi buraya girin">
+        <div id="feedback"></div>
+
+        <button onclick="nextWord()" id="nextBtn">Sonraki Kelime</button>
+
+        <button onclick="checkGuess()" id="guessBtn">Tahmin Et</button>
+        <div id="wordCompliment"></div>
+
+    </div>
+
+    <script>
+
+
+
+        const wordsWithHintsAndCompliments = [
+            { word: "gülümsemen", hint: "Yüzünde olması gereken", compliment: "Senin gülüşün dünyayı güzelleştiriyor." },
+            { word: "gözlerin", hint: "En beğendiğim yerin", compliment: "Senin gözlerin beni büyülüyor. " },
+            { word: "aşkkkk", hint: "Sana olan duygularım", compliment: "Seninle her şey daha güzel." },
+            { word: "melek", hint: "Benim gözümdeki", compliment: "Sen benim için gerçek bir meleksin." },
+            { word: "Nude", hint: "her attığında heycanlandığım", compliment: "Senin göğüslerin beni büyülüyor." },
+            { word: "kalbim", hint: "Seninle atıyor", compliment: "Seninle kalbim daha hızlı atıyor." },
+            { word: "güzellik", hint: "İç ve dış", compliment: "Senin güzelliğin beni büyülüyor." },
+            { word: "hayatım", hint: "Bana anlam katan", compliment: "Sen benim hayatımı renklendiriyorsun." },
+            { word: "dünya", hint: "Senin için yetersiz", compliment: "Sen benim için dünyadan daha değerlisin." },
+            { word: "sevgilim", hint: "Benim en değerli", compliment: "Senin gibi bir sevgiliye sahip olmak benim için bir şans." },
+            { word: "gül", hint: "Koku", compliment: "Senin güzelliğin gül kadar etkileyici." },
+            { word: "aşk", hint: "Bir duygu", compliment: "Seninle yaşadığım her an bir aşk hikayesi." }
+
+        ];// Örnek kelimeler
+
+        let currentWordIndex = 0;
+        let guessNumber = 0;
+        //oyunu iilk kelime ve ipcuçları ile başlat 
+        showHint();
+        // İpucu gösterme
+        function showHint() {
+
+            const currentWord = wordsWithHintsAndCompliments[currentWordIndex].hint;
+
+            document.getElementById("wordHint").innerText = `İpucu: ${currentWord}`;
+            document.getElementById("wordCompliment").innerText = wordsWithHintsAndCompliments[currentWordIndex].compliment  //övgüyü yazdır
+        }
+
+        // Sonraki kelimeye geçme
+        function nextWord() {
+            document.getElementById("feedback").innerText = ""; // Geri bildirimi temizle (yanlış tahmin uyarısı
+            currentWordIndex++;
+            if (currentWordIndex >= wordsWithHintsAndCompliments.length) {
+                currentWordIndex = 0; // Kelimelerin sonuna geldiyse başa dön
+            }
+            document.getElementById("guessInput").value = ""; // Tahmin kutusunu temizle
+            showHint(); // Yeni kelime için ipucu göster
+        }
+
+        // Tahmin kontrolü
+        function checkGuess() {
+            const guess = document.getElementById("guessInput").value.toLowerCase();
+            const currentWord = wordsWithHintsAndCompliments[currentWordIndex].word;
+            console.log(guess, currentWord);
+
+
+            if (guess === currentWord) {
+                document.getElementById("feedback").innerText = "Tebrikler! Doğru tahmin.";
+                guessNumber = 0;
+                alert("Tebrikler! Doğru tahmin.");
+
+            } else {
+                document.getElementById("feedback").innerText = "Maalesef yanlış tahmin. Başka bir deneyin.";
+                //her yanlış tahminden sonra tahminin bir harfini aç
+                guessNumber++;
+                document.getElementById("harfİpucu").innerText = `  Harf İpucu: ${currentWord.slice(0, guessNumber)}`;
+            }
+        }</script>
+</body>
+
+</html>
